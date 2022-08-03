@@ -150,6 +150,13 @@ function initMap() {
                 branchDetail.style.left = '0px';
                 // 마커 이미지 변경
                 
+                // 지점 정보 내용 변경
+                imgSrc.src = brachInfoList[i].imgSrc;
+                temperature.textContent = brachInfoList[i].temperature;
+                branchName.textContent = brachInfoList[i].branchName;
+                description.textContent = brachInfoList[i].description;
+                branchDetailAddress.textContent = brachInfoList[i].address;
+                publicTransport.textContent = brachInfoList[i].publicTransport;
             }
         })(marker, i));
         
