@@ -13,30 +13,39 @@ window.addEventListener('resize', () => {
     }
 });
 
-// jQuery
+// section3
+// fade in & out
+const cards = document.querySelectorAll('.card');
+const cardFirst = document.querySelector('.card:first-child');
+const time = 3000;
+let i = 0;
 
-$(document).ready(function() {
-    
-    //section3 
-    setInterval(function() { 
-        $('.general-info .card:first-child')
-            .fadeOut(1000)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo(".general-info")
-    },  5000);
-    
-});
+function fadeInAndOut(element) {
+    element.classList.add('fade');
+    setTimeout(() => {
+        element.classList.remove('fade');
+    }, time);
+
+    i++;
+
+    if(i == cards.length) {
+        i = 0;
+    }
+}
+
+function startInterval() {
+    fadeInAndOut(cards[i]);
+    return setInterval(() => {
+        fadeInAndOut(cards[i]);
+    }, time);
+}
+
+startInterval(); 
 
 // section4
-// tab frist icon color
+// tab frist icon color & img & info
 document.querySelector(".tabmenu li:first-child svg").classList.add('fill-blue');
-
-// tab first img
 document.querySelector(".unit-img img:first-child").classList.add('block');
-
-//tab first info
 document.querySelector(".tabmenu li:first-child .unit-info").classList.add('block');
 
 // tab icon & unit img & unit info
