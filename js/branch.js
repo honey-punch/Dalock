@@ -149,7 +149,7 @@ function initMap() {
                 // 지점 정보 슬라이딩
                 branchDetail.style.left = '0px';
                 // 마커 이미지 변경
-                
+                markerImg = markerImgWhite;
                 // 지점 정보 내용 변경
                 imgSrc.src = brachInfoList[i].imgSrc;
                 temperature.textContent = brachInfoList[i].temperature;
