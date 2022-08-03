@@ -129,9 +129,10 @@ main aside .search .search-area input {
     font-size: 16px;
     margin-left: 10px;
 }
-main aside .search .search-area a {
-    width: 20px;
+main aside .search .search-area button {
     margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* branch-list */
@@ -149,32 +150,39 @@ main aside .branch-list li .branch-name-area {
     display: flex;
     justify-content: space-between;
 }
-main aside .branch-list li .branch-name-area a {
+main aside .branch-list li .branch-name-area .branch-name-btn {
     font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+main aside .branch-list li .branch-name-area .share {
     margin-bottom: 15px;
-    font-weight: 700;
+    cursor: pointer;
 }
-main aside .branch-list li .branch-name-area a:hover {
-    color: var(--main-color);
+main aside .branch-list li .branch-name-area .share svg {
+    fill: var(--light-grey);
 }
-main aside .branch-list li .branch-info1 {
+main aside .branch-list li .branch-name-area .share svg:hover {
+    fill: var(--main-color);
+}
+main aside .branch-list li .address-distance {
     display: flex;
     justify-content: space-between;
     margin-bottom: 7px;
 }
-main aside .branch-list li .branch-info1 span {
+main aside .branch-list li .address-distance span {
     font-size: 16px;
     font-weight: 400;
 }
-main aside .branch-list li .branch-info1 .distance {
+main aside .branch-list li .address-distance .distance {
     color: var(--main-color);
     font-weight: 600;
     margin-left: 10px;
 }
-main aside .branch-list li .branch-info2 {
+main aside .branch-list li .time-parking {
 
 }
-main aside .branch-list li .branch-info2 span {
+main aside .branch-list li .time-parking span {
     font-size: 13px;
     font-weight: 400;
     color: var(--light-grey);
