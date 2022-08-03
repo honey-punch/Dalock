@@ -59,7 +59,7 @@ let publicTransport = document.querySelector('.public-transport');
 
 for (let i = 0; i < branchNameBtn.length; i++) {
     branchNameBtn[i].addEventListener('click', () => {
-        //imgSrc.getAttribute('src') = brachInfoList[i].imgSrc;
+        imgSrc.src = brachInfoList[i].imgSrc;
         temperature.textContent = brachInfoList[i].temperature;
         branchName.textContent = brachInfoList[i].branchName;
         description.textContent = brachInfoList[i].description;
