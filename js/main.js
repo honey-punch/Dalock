@@ -16,7 +16,7 @@ window.addEventListener('resize', () => {
 // section3
 // fade in & out
 const cards = document.querySelectorAll('.card');
-const cardFirst = document.querySelector('.card:first-child');
+
 const time = 3000;
 let i = 0;
 
