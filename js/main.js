@@ -1,3 +1,5 @@
+alert('현재는 상단 메뉴의 지점 안내/투어예약 혹은 하단의 지점안내/투어예약하러가기 버튼을 통해서 지점 정보만 보실 수 있습니다.');
+
 // ham-menu
 
 const ham = document.querySelector(".ham");
