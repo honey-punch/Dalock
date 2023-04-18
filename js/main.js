@@ -57,40 +57,6 @@ const unitImgList = document.querySelectorAll(".unit-img img");
 const unitInfoList = document.querySelectorAll(".unit-info");
 
 // auto tab menu
-// let i = 0;
-
-// function autoTab () {
-//     for (let j = 0; j < tabIconSvgList.length; j++) {
-//         unitImgList[j].classList.remove('block');
-//         unitInfoList[j].classList.remove('block');
-//         tabIconSvgList[j].classList.remove('fill-blue');
-//     }
-//     unitImgList[i].classList.add('block');
-//     unitInfoList[i].classList.add('block');
-//     tabIconSvgList[i].classList.add('fill-blue');
-//     i++;
-//     if(i === tabIconSvgList.length) {
-//         i = 0;
-//     }
-// }
-// setInterval(autoTab, 1000);
-
-// tab menu
-// for (let i = 0; i < tabIconList.length; i++) {
-//     tabIconList[i].addEventListener('click', (e) => {
-//         e.preventDefault();
-//         for (let j = 0; j < tabIconList.length; j++) {
-//             unitImgList[j].classList.remove('block');
-//             unitInfoList[j].classList.remove('block');
-//             tabIconSvgList[j].classList.remove('fill-blue');
-//         }
-//         unitImgList[i].classList.add('block');
-//         unitInfoList[i].classList.add('block');
-//         tabIconSvgList[i].classList.add('fill-blue');
-//     })
-// }
-
-// refactor
 let index = 0;
 
 function autoTab() {
