@@ -47,11 +47,8 @@ function makeCopy() {
     branchList.appendChild(copy);
 }
 
-let i = 0;
-
-while(i < brachInfoList.length - 1) {
+for (let i = 0; i < brachInfoList.length - 1; i++) {
     makeCopy();
-    i++;
 }
 
 let branchListName = document.querySelectorAll('.branch-name-btn');
@@ -59,12 +56,12 @@ let branchListAddress = document.querySelectorAll('.address');
 let branchListDistance = document.querySelectorAll('.distance');
 let timeParking = document.querySelectorAll('.time-parking span');
 
-for (let i = 0; i < brachInfoList.length; i++) {
-    branchListName[i].textContent = brachInfoList[i].branchName;
-    branchListAddress[i].textContent = brachInfoList[i].address;
-    branchListDistance[i].textContent = brachInfoList[i].distance;
-    timeParking[i].textContent = brachInfoList[i].timeParking;
-}
+brachInfoList.forEach((v, i) => {
+    branchListName[i].textContent = v.branchName;
+    branchListAddress[i].textContent = v.address;
+    branchListDistance[i].textContent = v.distance;
+    timeParking[i].textContent = v.timeParking;
+})
 
 // branch-detail
 const branchNameBtn = document.querySelectorAll('.branch-name-btn');
@@ -88,40 +85,40 @@ let description = document.querySelector('.description');
 let branchDetailAddress = document.querySelector('.branch-detail-address');
 let publicTransport = document.querySelector('.public-transport');
 
-for (let i = 0; i < branchNameBtn.length; i++) {
+brachInfoList.forEach((v, i) => {
     branchNameBtn[i].addEventListener('click', () => {
-        imgSrc.src = brachInfoList[i].imgSrc;
-        temperature.textContent = brachInfoList[i].temperature;
-        branchName.textContent = brachInfoList[i].branchName;
-        description.textContent = brachInfoList[i].description;
-        branchDetailAddress.textContent = brachInfoList[i].address;
-        publicTransport.textContent = brachInfoList[i].publicTransport;
+        imgSrc.src = v.imgSrc;
+        temperature.textContent = v.temperature;
+        branchName.textContent = v.branchName;
+        description.textContent = v.description;
+        branchDetailAddress.textContent = v.address;
+        publicTransport.textContent = v.publicTransport;
     })
-}
+});
 
 // faq toggle
 const faqToggleBtn = document.querySelectorAll(".faq-list i");
 const faqToggleMenu = document.querySelectorAll(".faq-list ul");
 
-for (let i = 0; i < faqToggleBtn.length; i++) {
-    faqToggleBtn[i].addEventListener('click', (e) => {
+faqToggleBtn.forEach((v, i) => {
+    v.addEventListener('click', (e) => {
         e.preventDefault();
-        faqToggleBtn[i].classList.toggle('clicked');
+        v.classList.toggle('clicked');
         faqToggleMenu[i].classList.toggle('block');
     })
-};
+});
 
 // notice toggle
 const noticeToggleBtn = document.querySelectorAll(".notice-list i");
 const noticeToggleMenu = document.querySelectorAll(".notice-list ul");
 
-for (let i = 0; i < noticeToggleBtn.length; i++) {
-    noticeToggleBtn[i].addEventListener('click', (e) => {
+noticeToggleBtn.forEach((v, i) => {
+    v.addEventListener('click', (e) => {
         e.preventDefault();
-        noticeToggleBtn[i].classList.toggle('clicked')
+        v.classList.toggle('clicked');
         noticeToggleMenu[i].classList.toggle('block');
     })
-};
+})
 
 // section map
 // Initialize and add the map

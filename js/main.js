@@ -34,14 +34,11 @@ function fadeInAndOut(element) {
     }
 }
 
-function startInterval() {
-    fadeInAndOut(cards[i]);
-    return setInterval(() => {
-        fadeInAndOut(cards[i]);
-    }, time);
-}
+fadeInAndOut(cards[i]);
 
-startInterval(); 
+setInterval(() => {
+    fadeInAndOut(cards[i]);
+}, time);
 
 // section4
 // tab frist icon color & img & info
